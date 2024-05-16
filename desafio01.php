@@ -37,7 +37,7 @@ function sacarValor() {
     global $saldo;
 
     echo "Digite o valor que deseja sacar: ";
-    $valorParaSaque = fgets(STDIN);
+    $valorParaSaque = (float) fgets(STDIN);
 
     if ($valorParaSaque > $saldo) {
        popen('cls', 'w'); 
@@ -55,7 +55,7 @@ function depositarValor() {
     global $saldo;
 
     echo "Digite o valor que deseja depositar: ";
-    $valorParaDeposito = fgets(STDIN);
+    $valorParaDeposito = (float) fgets(STDIN);
     $saldo = $saldo + $valorParaDeposito;
     popen('cls', 'w');
     echo "Depósito de R$$valorParaDeposito realizado com sucesso!\n\n";
